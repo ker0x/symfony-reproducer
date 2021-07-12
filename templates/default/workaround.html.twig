@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Partial workaround</h1>
+
+    {{ form_start(form, {attr: {id: 'formWorkaround'}}) }}
+        {{ form(form) }}
+    {{ form_end(form) }}
+
+    <button type="submit" form="formWorkaround">Submit</button>
+    <p>This button will submit the form because the form attribute is set with the form ID</p>
+    <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Button#attributes" target="_blank">MDN Button form attribute</a>
+</div>
+{% endblock %}
