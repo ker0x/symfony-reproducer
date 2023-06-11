@@ -1,7 +1,13 @@
-# Symfony bugs and features reproducer repository
+## Reproducer for [50628](https://github.com/symfony/symfony/issues/50628)
 
-## Bugs
-* [42075](https://github.com/symfony/symfony/issues/42075) : [bug/form-id-reproducer](https://github.com/ker0x/symfony-reproducer/tree/bug/form-id-reproducer)
+```bash
+git clone git@github.com:ker0x/symfony-reproducer.git
+cd symfony-reproducer
+git co --track origin/bug/issue-50628
+composer install
+yarn install --force
+yarn dev
+symfony serve
+```
 
-## Features
-* [43629](https://github.com/symfony/symfony/issues/43629) : [feature/bootstrap5-toggle-buttons](https://github.com/ker0x/symfony-reproducer/tree/feature/bootstrap5-toggle-buttons)
+Fo to the main page, select one or more value in the select, then focus on an other field to trigger the error.
